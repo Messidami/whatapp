@@ -1,0 +1,100 @@
+*
+{
+    padding: o;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.house {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.house .container {
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.house .container h1 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.house .container p {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.profile-pic-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.profile-pic-wrapper img {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #0f0;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.input-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.input-name input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #0f0;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+    input[type="file"] {
+    display: none;
+}
+.next {
+  background-color: #25d366;
+  color: black;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  margin-top: 250px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.next a{
+    color: #000;
+    text-decoration: none;
+}
