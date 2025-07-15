@@ -20,7 +20,7 @@
       <span>English</span>
       <span class="globe">🌐</span>
     </div>
-    <button class="agree" her><a href="next1.html">Agree and continue</a></button>
+    <button class="agree" her><a href="signup.php">Agree and continue</a></button>
   </div>
    </div>
 </body>

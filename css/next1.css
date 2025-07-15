@@ -19,7 +19,7 @@
   margin-top: 35px;
 }
 
-.h0use .container h2 {
+.house .container h2 {
   margin-bottom: 10px;
   font-size: 22px;
 }
@@ -51,7 +51,6 @@
   margin-bottom: 15px;
   font-size: 14px;
 }
-
 .phone-input {
   display: flex;
   background-color: #000;
@@ -84,7 +83,6 @@
   width: 100%;
   font-size: 16px;
   border: none;
-  margin-top: 300px;
   border-radius: 25px;
   cursor: pointer;
 }

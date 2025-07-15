@@ -1,77 +1,89 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-.house{
-  background-color: #000;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.house .container {
-  text-align: center;
-  width: 400px;
-  margin: auto;
-  margin-top: 40px;
-  border-radius: 8px;
-}
+    body {
+      background-color: #000;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.header h1 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.subtext {
-  color: #aaa;
-  font-size: 14px;
-  margin: 15px 0px 20px 0px ;
-}
-.subtext strong {
-  color: white;
-}
-.input-code {
-  display: flex;
-  gap: 5px;
-  margin: 40px 0;
-}
-.digit-box {
-  width: 30px;
-  margin: auto;
-  margin-top: -20px;
-  text-align: center;
-  font-size: 1.5em;
-}
-.input-code .digit-box input{
-  border: none;
-  padding: 10px;
-  background-color: transparent;
-  color: aliceblue;
-  border-bottom: 1px solid white;
-  outline:  none;
-  width: 30px;
-}
-.resend {
-  color: lime;
-  font-size: 0.9em;
-  text-decoration: none;
-}
-button{
-background-color: #25d366;
-color: black;
-padding: 12px;
-width: 100%;
-font-size: 16px;
-border: none;
-margin-top: 300px;
-border-radius: 25px;
-cursor: pointer;
-}
-button a{
-  color: #000;
-  text-decoration: none;
-}
-      
+    .house {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      color: #aaa;
+      font-size: 14px;
+      margin: 15px 0 20px;
+    }
+
+    .subtext strong {
+      color: white;
+    }
+
+    .input-code {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px 0;
+    }
+
+    .digit-box input {
+      border: none;
+      background-color: transparent;
+      color: aliceblue;
+      border-bottom: 2px solid white;
+      outline: none;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    .resend {
+      color: lime;
+      font-size: 0.9em;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #25d366;
+      color: black;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1fc754;
+    }
+
+    .error {
+      color: red;
+      margin-bottom: 15px;
+    }
