@@ -5,8 +5,9 @@ session_start();
 $error="";
 $user = $_SESSION['user'];
 
-
-
+if(!isset($user)){
+  header('location:signup.php');
+}
 
 
 

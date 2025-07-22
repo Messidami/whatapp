@@ -1,3 +1,18 @@
+<?php
+session_start();
+include("db.php");
+
+$user = $_SESSION["user"];
+
+
+
+
+// if(!isset($user)){
+//   header('location:signup.php');
+// }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +27,28 @@
 
   <div class="chat-list">
 
+  <?php
+  
+  $select = "SELECT* FROM users";
+  $query = mysqli_query($con, $select);
+  while($row = mysqli_fetch_array($query)){
+
+  ?>
+
+  <a href="chat.php?=<?php echo $row['id']; ?>">
+
     <div class="chat">
         <div class="avatar"><img src="css/image/WhatsApp Image 2025-06-11 at 10.44.35_2427341e.jpg" alt=""></div>
         <div class="chat-info">
-          <h4>Proxy</h4>
+          <h4><?php  echo $row ['phone_no'];  ?></h4>
           <p>you: Okay.</p>
         </div>
       <div class="chat-time">12:19 PM</div>
     </div>
+    </a>
       
+        <?php }
+        ?>
  
 
 

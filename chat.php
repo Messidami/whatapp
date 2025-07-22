@@ -1,3 +1,21 @@
+<?php
+
+session_start();
+include("db.php");
+
+$user = $_SESSION["user"];
+
+
+
+
+if(!isset($user)){
+  header('location:signup.php');
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +34,7 @@
     <div class="message sent">Yes, okay coming soon.</div>
   </div>
   <form class="input-container" action="#">
-    <input type="text" placeholder="Type a message" disabled />
+    <input type="text" placeholder="Type a message"/>
     <button type="submit" disabled>Send</button>
   </form>
   </div>
