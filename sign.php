@@ -30,67 +30,67 @@ if(isset($_POST['signup'])){
   $check = "SELECT* FROM users WHERE phone_no = '$phone'";
   $phone_check= mysqli_fetch_array($con ->query($check));
   
-//   if($phone_check['phone_no'] == $phone){
+  if($phone_check['phone_no'] == $phone){
 
-//     $sql= "UPDATE users SET verifycode =$pin WHERE phone_no = $phone";
-//     $query=$con->query($sql);
-//     $_SESSION['user'] = $phone;
-//     header('location:verify.php');
-
-
- require 'phpmailer/vendor/autoload.php'; // Composer autoload
-
-$mail = new PHPMailer(true);
-
-try {
-
-$mail->isSMTP();                                      // ✅ Required!
-$mail->Host       = 'smtp.gmail.com';                 // ✅ Do NOT use IP
-$mail->SMTPAuth   = true;
-$mail->Username   = 'kodakblacksth@gmail.com';        // ✅ Your Gmail
-$mail->Password   = 'eihfhqbyanvlnnkj';               // ✅ Gmail App Password
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port       = 587;
-
-
-
-
-
-
-    // Recipients
-    $mail->setFrom('dammiemmanuel05@gmail.com', 'messidami');
-    $mail->addAddress('kodakblacksth@gmail.com', 'username');
-
-    // Content
-    $mail->isHTML(true);
-    $mail->Subject = 'Test Email from PHPMailer';
-    $mail->Subject = 'verification code';
-    $mail->Body    = 'use this code to verify you are the user echo $pin.';
-
-    $mail->send();
-    echo 'Email has been sent successfully!';
-
+    $sql= "UPDATE users SET verifycode =$pin WHERE phone_no = $phone";
+    $query=$con->query($sql);
     $_SESSION['user'] = $phone;
     header('location:verify.php');
 
-} catch (Exception $e) {
-    echo "Email failed to send. Mailer Error: {$mail->ErrorInfo}";
-}
-  }
-//   }else{
 
-//   $sql = "INSERT INTO users (country, phone_no, email, verify_code)
-//   VALUES ('$country','$phone','$email','$pin') ";
-//   $query= $con->query($sql);
+//  require 'phpmailer/vendor/autoload.php'; // Composer autoload
 
-// $_SESSION['user']=$phone;
+// $mail = new PHPMailer(true);
 
-// header('location: verify.php');
+// try {
 
-//   }
+// $mail->isSMTP();                                      // ✅ Required!
+// $mail->Host       = 'smtp.gmail.com';                 // ✅ Do NOT use IP
+// $mail->SMTPAuth   = true;
+// $mail->Username   = 'kodakblacksth@gmail.com';        // ✅ Your Gmail
+// $mail->Password   = 'eihfhqbyanvlnnkj';               // ✅ Gmail App Password
+// $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+// $mail->Port       = 587;
 
 
+
+
+
+
+//     // Recipients
+//     $mail->setFrom('dammiemmanuel05@gmail.com', 'messidami');
+//     $mail->addAddress('kodakblacksth@gmail.com', 'username');
+
+//     // Content
+//     $mail->isHTML(true);
+//     $mail->Subject = 'Test Email from PHPMailer';
+//     $mail->Subject = 'verification code';
+//     $mail->Body    = 'use this code to verify you are the user echo $pin.';
+
+//     $mail->send();
+//     echo 'Email has been sent successfully!';
+
+//     $_SESSION['user'] = $phone;
+//     header('location:verify.php');
+
+// } catch (Exception $e) {
+//     echo "Email failed to send. Mailer Error: {$mail->ErrorInfo}";
 // }
+//   }
+  }else{
+
+  $sql = "INSERT INTO users (country, phone_no, email, verify_code)
+  VALUES ('$country','$phone','$email','$pin') ";
+  $query= $con->query($sql);
+
+$_SESSION['user']=$phone;
+
+header('location: verify.php');
+
+  }
+
+
+}
 
 ?>
 

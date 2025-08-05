@@ -8,8 +8,30 @@ $user = $_SESSION["user"];
 
 
 
-if(!isset($user)){
-  header('location:signup.php');
+// if(!isset($user)){
+//   header('location:signup.php');
+// }
+
+$table2="CREATE TABLE IF NOT EXISTS whatapp_messages(
+  id INT (11)  AUTO_INCREMENT PRIMARY KEY,
+  sender_id INT (11),
+  reciever_id INT (11),
+  message VARCHAR (1024),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  )";
+
+  $query1= $con->query($table2);
+
+  $reciever_id= $_GET['chat'];
+
+if(isset($_POST['send'])){
+  $text = mysqli_real_escape_string($con, $_POST['message']);
+  
+  if(!empty($text));
+
+  $insert = "INSERT INTO  whatsapp_message (sender_id , reciever_id , message, created_at)
+            VALUES ('$user' , '$reciever_id' , '$text')" ;
+   mysqli_query($con, $insert) ;
 }
 
 
@@ -33,9 +55,9 @@ if(!isset($user)){
     <div class="message received">nice one. our tutor in class Already</div>
     <div class="message sent">Yes, okay coming soon.</div>
   </div>
-  <form class="input-container" action="#">
-    <input type="text" placeholder="Type a message"/>
-    <button type="submit" disabled>Send</button>
+   <form action="" method="post">
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    <button type="submit" name="send">Send</button>
   </form>
   </div>
     

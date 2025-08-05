@@ -42,21 +42,21 @@ header {
     align-self: flex-end;
     border-top-right-radius: 0;
 }
-.input-container {
+textarea {
     padding: 0.5rem;
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
     border-top: 1px solid #ddd;
 }
-.input-container input[type="text"] {
+textarea {
     flex-grow: 1;
     padding: 0.7rem 1rem;
     border-radius: 20px;
     border: 1px solid #ccc;
     font-size: 1rem;
 }
-.input-container button {
+.house  button {
     margin-left: 0.5rem;
     background-color: #25d366;
     border: none;
