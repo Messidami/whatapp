@@ -4,9 +4,10 @@ include "db.php";
 
 $user = $_SESSION["user"];
 
-if(!isset($user)){
-  header('location:signup.php');
-}
+// if(!isset($user)){
+//   header('location:signup.php');
+// }
+
 
 
 if (isset($_POST['signup'])) {
